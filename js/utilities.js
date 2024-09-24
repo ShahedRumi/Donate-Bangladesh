@@ -8,17 +8,8 @@ function donate(currentDonation, receivedDonation){
     document.getElementById('totalAmount').innerText = remainAmount;
 
     return currentDonation + receivedDonation;
-}
 
-// document.getElementById('page').addEventListener('click',function(event){
-//     const buttons = document.getElementsByClassName('button');
-//     for(let item of buttons){
-//         item.style.backgroundColor = '#F9F7F3';
-//     }
-//     if(event.target.tagName === 'BUTTON') {
-//         event.target.style.backgroundColor = '#B4F461';
-//     }
-// })
+}
 
 
 document.getElementById('page').addEventListener('click', function(event) {
@@ -31,3 +22,12 @@ document.getElementById('page').addEventListener('click', function(event) {
         event.target.style.backgroundColor = '#B4F461';
     }
 });
+
+function showPage(id){
+    let allPages = document.getElementsByTagName('main');
+
+    for (let page of allPages){
+        page.classList.add('hidden');
+    }
+    document.getElementById(id).classList.remove('hidden');
+}
