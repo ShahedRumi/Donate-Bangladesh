@@ -1,4 +1,5 @@
 const donationHistory = document.getElementById('donate-history');
+const defaultDonationMessage = document.getElementById('default-donation');
 
 function donationForNoakhali(){
     let noakhaliDonation = Number(document.getElementById('noakhaliDonation').innerText);
@@ -9,6 +10,7 @@ function donationForNoakhali(){
     if(donateCalculation){
         document.getElementById('noakhaliDonation').innerText = donateCalculation;
 
+        defaultDonationMessage.classList.add('hidden');
         let historyBlock = document.createElement('div');
         historyBlock.classList.add('border','rounded-2xl','p-8','space-y-4');
         historyBlock.innerHTML +=`
@@ -30,6 +32,7 @@ function donateForFeni(){
     if(donateCalculation){
         document.getElementById('feniDonation').innerText = donateCalculation;
 
+        defaultDonationMessage.classList.add('hidden');
         let historyBlock = document.createElement('div');
         historyBlock.classList.add('border','rounded-2xl','p-8','space-y-4');
         historyBlock.innerHTML +=`
@@ -50,6 +53,7 @@ function quotaDonation(){
     if(donateCalculation){
         document.getElementById('quotaDonation').innerText = donateCalculation;
 
+        defaultDonationMessage.classList.add('hidden');
         let historyBlock = document.createElement('div');
         historyBlock.classList.add('border','rounded-2xl','p-8','space-y-4');
         historyBlock.innerHTML +=`

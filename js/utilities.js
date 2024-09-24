@@ -1,6 +1,6 @@
 function donate(currentDonation, receivedDonation){
     let totalAmount = Number(document.getElementById('totalAmount').innerText);
-    if(totalAmount < receivedDonation || isNaN(receivedDonation)){
+    if(totalAmount < receivedDonation || isNaN(receivedDonation) || receivedDonation === 0){
         alert('Invalid Input');
         return;
     }
