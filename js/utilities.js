@@ -9,3 +9,25 @@ function donate(currentDonation, receivedDonation){
 
     return currentDonation + receivedDonation;
 }
+
+// document.getElementById('page').addEventListener('click',function(event){
+//     const buttons = document.getElementsByClassName('button');
+//     for(let item of buttons){
+//         item.style.backgroundColor = '#F9F7F3';
+//     }
+//     if(event.target.tagName === 'BUTTON') {
+//         event.target.style.backgroundColor = '#B4F461';
+//     }
+// })
+
+
+document.getElementById('page').addEventListener('click', function(event) {
+    const buttons = document.getElementsByClassName('button');
+    
+    if (event.target.tagName === 'BUTTON') {
+        for (let item of buttons) {
+            item.style.backgroundColor = '#F9F7F3';
+        }
+        event.target.style.backgroundColor = '#B4F461';
+    }
+});

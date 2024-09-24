@@ -22,3 +22,26 @@ function donateForFeni(){
     }
     document.getElementById('feniDonateAmount').value = '';
 }
+
+function quotaDonation(){
+    let quotaDonation = Number(document.getElementById('quotaDonation').innerText);
+    let quotaDonateAmount = Number(document.getElementById('quotaDonateAmount').value);
+    
+    let donateCalculation = donate(quotaDonation,quotaDonateAmount);
+
+    if(donateCalculation){
+        document.getElementById('quotaDonation').innerText = donateCalculation;
+
+        let donationHistory = document.getElementById('donate-history');
+        let historyBlock = document.createElement('div');
+        historyBlock.classList.add('border','rounded-2xl','p-8','space-y-4');
+        historyBlock.innerHTML +=`
+        <h1 class="text-2xl font-bold">${quotaDonateAmount} Taka is donated for quota movement-2024 at Feni, Bangladesh</h1>
+          <p class="text-gray-500">Date: ${new Date}</p>
+    `
+    donationHistory.appendChild(historyBlock);
+    }
+    document.getElementById('quotaDonateAmount').value = '';
+
+    
+}
