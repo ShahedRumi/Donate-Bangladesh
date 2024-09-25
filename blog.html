@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate Bangladesh</title>
+    <title>Donate Bangladesh - Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3259a9335c.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -16,16 +19,19 @@
                 primary: '#B4F461',
                 background: '#F9F7F3',
                 hover: '#90EE90'
+              },
+              fontFamily: {
+                lexend: "Lexend, sans-serif"
               }
             }
           }
         }
       </script>
 </head>
-<body>
+<body class="font-lexend">
     
-    <header class="container mx-auto sticky top-0 backdrop-blur-3xl rounded-b-2xl mb-20">
-      <article class="bg-background">
+    <header class="container mx-auto sticky top-0 bg-background rounded-b-2xl mb-20 z-10">
+      <article>
         <section class="w-11/12 mx-auto pt-6 pb-10">
           <div class="flex justify-between items-center">
               <div class="hidden lg:flex">
@@ -33,7 +39,7 @@
               </div>
               <div class="flex gap-3 items-center w-1/3 md:w-auto">
                 <img src="images/logo.png" alt="">
-                <h1 class="font-semibold text-lg md:text-xl">Donate Bangladesh - Blog</h1>
+                <h1 class="font-semibold text-lg md:text-xl">Donate Bangladesh</h1>
               </div>
               <div class="flex items-center gap-5">
                 <div class="flex gap-2 items-center">
@@ -47,7 +53,7 @@
                   <ul
                     tabindex="0"
                     class="menu menu-sm dropdown-content right-0 bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Blog</a></li>
+                      <li><a href="index.html">Home</a></li>
                       
                   </ul>
                 </div>
@@ -59,36 +65,41 @@
 
     <main class="container mx-auto">
         <section class="w-11/12 mx-auto space-y-10">
-            <h1 class="text-4xl font-bold">Important FAQ</h1>
+            <h1 class="text-4xl font-bold">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
             <div class="join join-vertical w-full">
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" checked="checked" />
-                  <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                  <div class="collapse-title text-2xl font-medium">What is the Document Object Model (DOM)?</div>
                   <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="w-2/3 text-lg">The Document Object Model (DOM) is a programming interface that represents the structure of an HTML as a tree of objects, allowing for the manipulation of its content and structure.</p>
                   </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                  <div class="collapse-title text-2xl font-medium">How do you select an element from the DOM?</div>
                   <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="w-2/3 text-lg">You can select an element from the DOM using methods like getElementsByClassName(), document.querySelector() or document.getElementById().</p>
                   </div>
                 </div>
                 <div class="collapse collapse-arrow join-item border-base-300 border">
                   <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                  <div class="collapse-title text-2xl font-medium"> What is event delegation in the context of the DOM, and why is it useful?</div>
                   <div class="collapse-content">
-                    <p>hello</p>
+                    <p class="w-2/3 text-lg">Event delegation is a technique in which a single event listener is added to a parent element to manage events for multiple child elements, improving efficiency and reducing memory usage.</p>
                   </div>
                 </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-2xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                    <div class="collapse-content">
+                      <p class="w-2/3 text-lg">You can manipulate an element's attributes using element.setAttribute() and its styles using element.style.property = value.</p>
+                    </div>
+                  </div>
               </div>
         </section>
     </main>
 
     <footer class="container mx-auto bg-background h-20 mt-20">
     </footer>
-    <script src="js/utilities.js"></script>
-    <script src="js/donateCalculate.js"></script>
 </body>
 </html>

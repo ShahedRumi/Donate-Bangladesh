@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/3259a9335c.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -16,15 +19,18 @@
                 primary: '#B4F461',
                 background: '#F9F7F3',
                 hover: '#90EE90'
+              },
+              fontFamily: {
+                lexend: "Lexend, sans-serif"
               }
             }
           }
         }
       </script>
 </head>
-<body>
+<body class="font-lexend">
     
-    <header class="container mx-auto sticky top-0 backdrop-blur-3xl rounded-b-2xl">
+    <header class="container mx-auto sticky top-0 backdrop-blur-3xl rounded-b-2xl z-10">
       <article class="bg-background">
         <section class="w-11/12 mx-auto pt-6 pb-10">
           <div class="flex justify-between items-center">
@@ -47,7 +53,7 @@
                   <ul
                     tabindex="0"
                     class="menu menu-sm dropdown-content right-0 bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Blog</a></li>
+                      <li><a href="blog.html">Blog</a></li>
                       
                   </ul>
                 </div>
@@ -58,19 +64,19 @@
       <section class="w-11/12 mx-auto flex justify-center">
         <div id="page" class="flex gap-6 my-8">
           <button onclick="showPage('donation-page')" class="btn button font-medium text-lg md:text-xl bg-primary hover:bg-hover border-none">Donation</button>
-          <button onclick="showPage('history-page')" class="btn button font-medium text-lg md:text-xl">History</button>
+          <button onclick="showPage('history-page')" class="btn button font-medium text-lg border border-gray-300 md:text-xl">History</button>
         </div>
       </section>
     </header>
 
     <main id="donation-page" class="container mx-auto">
       <section class="w-11/12 mx-auto space-y-8">
-        <div class="grid md:grid-cols-2 gap-6 items-center border rounded-xl p-5">
+        <div class="grid lg:grid-cols-2 gap-6 items-center border rounded-xl p-5">
           <img class="w-full max-h-[470px]" src="images/noakhali.png" alt="">
           <div class="space-y-6">
             <div class="flex gap-2 items-center p-4 bg-background w-fit rounded-lg">
               <img src="images/coin.png" alt="">
-              <h1 class="font-medium text-lg md:text-xl"><span id="noakhaliDonation">5500</span> BDT</h1>
+              <h1 class="font-medium text-lg md:text-xl"><span id="noakhaliDonation">17800</span> BDT</h1>
             </div>
             <h1 class="text-xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
             <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
@@ -79,12 +85,12 @@
           </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 items-center border rounded-xl p-5">
+        <div class="grid lg:grid-cols-2 gap-6 items-center border rounded-xl p-5">
           <img class="w-full max-h-[470px]" src="images/feni.png" alt="">
           <div class="space-y-6">
             <div class="flex gap-2 items-center p-4 bg-background w-fit rounded-lg">
               <img src="images/coin.png" alt="">
-              <h1 class="font-medium text-lg md:text-xl"><span id="feniDonation">5500</span> BDT</h1>
+              <h1 class="font-medium text-lg md:text-xl"><span id="feniDonation">23500</span> BDT</h1>
             </div>
             <h1 class="text-xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
             <p> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
@@ -93,12 +99,12 @@
           </div>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-6 items-center border rounded-xl p-5">
+        <div class="grid lg:grid-cols-2 gap-6 items-center border rounded-xl p-5">
           <img class="w-full max-h-[470px]" src="images/quota-protest.png" alt="">
           <div class="space-y-6">
             <div class="flex gap-2 items-center p-4 bg-background w-fit rounded-lg">
               <img src="images/coin.png" alt="">
-              <h1 class="font-medium text-lg md:text-xl"><span id="quotaDonation">5500</span> BDT</h1>
+              <h1 class="font-medium text-lg md:text-xl"><span id="quotaDonation">21570</span> BDT</h1>
             </div>
             <h1 class="text-xl font-bold">Aid for Injured in the Quota Movement</h1>
             <p>The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>

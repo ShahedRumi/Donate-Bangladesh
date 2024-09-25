@@ -6,7 +6,6 @@ function donate(currentDonation, receivedDonation){
     }
     const remainAmount = totalAmount - receivedDonation;
     document.getElementById('totalAmount').innerText = remainAmount;
-
     return currentDonation + receivedDonation;
 
 }
