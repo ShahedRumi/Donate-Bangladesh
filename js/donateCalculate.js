@@ -1,5 +1,3 @@
-const donationHistory = document.getElementById('donate-history');
-const defaultDonationMessage = document.getElementById('default-donation');
 
 function donationForNoakhali(){
     let noakhaliDonation = Number(document.getElementById('noakhaliDonation').innerText);
@@ -9,15 +7,8 @@ function donationForNoakhali(){
 
     if(donateCalculation){
         document.getElementById('noakhaliDonation').innerText = donateCalculation;
-
-        defaultDonationMessage.classList.add('hidden');
-        let historyBlock = document.createElement('div');
-        historyBlock.classList.add('border','rounded-2xl','p-8','space-y-4');
-        historyBlock.innerHTML +=`
-        <h1 class="text-2xl font-bold">${noakhaliDonateAmount} Taka is donated for famine-2024 at Noakhali, Bangladesh</h1>
-          <p class="text-gray-500">Date: ${new Date}</p>
-        `
-        donationHistory.appendChild(historyBlock);
+        document.getElementById('donation-modal').checked = true;
+        allDonationHistory(noakhaliDonateAmount,'Donate for Flood at Noakhali');
     }
     document.getElementById('noakhaliDonateAmount').value = '';
 }
@@ -31,15 +22,8 @@ function donateForFeni(){
 
     if(donateCalculation){
         document.getElementById('feniDonation').innerText = donateCalculation;
-
-        defaultDonationMessage.classList.add('hidden');
-        let historyBlock = document.createElement('div');
-        historyBlock.classList.add('border','rounded-2xl','p-8','space-y-4');
-        historyBlock.innerHTML +=`
-        <h1 class="text-2xl font-bold">${feniDonateAmount} Taka is donated for Flood-2024 at Feni, Bangladesh</h1>
-          <p class="text-gray-500">Date: ${new Date}</p>
-        `
-        donationHistory.appendChild(historyBlock);
+        document.getElementById('donation-modal').checked = true;
+        allDonationHistory(feniDonateAmount,'Donate for Flood Relief in Feni');
     }
     document.getElementById('feniDonateAmount').value = '';
 }
@@ -52,17 +36,9 @@ function quotaDonation(){
 
     if(donateCalculation){
         document.getElementById('quotaDonation').innerText = donateCalculation;
-
-        defaultDonationMessage.classList.add('hidden');
-        let historyBlock = document.createElement('div');
-        historyBlock.classList.add('border','rounded-2xl','p-8','space-y-4');
-        historyBlock.innerHTML +=`
-        <h1 class="text-2xl font-bold">${quotaDonateAmount} Taka is donated for quota movement-2024 at Dhaka, Bangladesh</h1>
-          <p class="text-gray-500">Date: ${new Date}</p>
-        `
-        donationHistory.appendChild(historyBlock);
+        document.getElementById('donation-modal').checked = true;
+        allDonationHistory(quotaDonateAmount,'Aid for Injured in the Quota Movement');
     }
     document.getElementById('quotaDonateAmount').value = '';
 
-    
 }

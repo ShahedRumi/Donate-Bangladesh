@@ -1,7 +1,7 @@
 function donate(currentDonation, receivedDonation){
     let totalAmount = Number(document.getElementById('totalAmount').innerText);
-    if(totalAmount < receivedDonation || isNaN(receivedDonation) || receivedDonation === 0){
-        alert('Invalid Input');
+    if(totalAmount < receivedDonation || isNaN(receivedDonation) || receivedDonation <= 0){
+        alert('Invalid Donation Amount');
         return;
     }
     const remainAmount = totalAmount - receivedDonation;
@@ -9,6 +9,17 @@ function donate(currentDonation, receivedDonation){
 
     return currentDonation + receivedDonation;
 
+}
+
+function allDonationHistory(amount,reason){
+    document.getElementById('default-donation').classList.add('hidden');
+    let historyBlock = document.createElement('div');
+    historyBlock.classList.add('border','rounded-2xl','p-8','space-y-4');
+    historyBlock.innerHTML +=`
+        <h1 class="text-2xl font-bold">${amount} Taka is donated for ${reason}, Bangladesh</h1>
+        <p class="text-gray-500 bg-gray-50 p-4 rounded-lg">Date: ${new Date}</p>
+    `
+    document.getElementById('donate-history').appendChild(historyBlock);
 }
 
 
